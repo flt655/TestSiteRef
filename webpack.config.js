@@ -26,8 +26,5 @@ module.exports = {
   },
   entry: [
     './src/index.js'
-],
-watch: true,
-colors: true,
-progress: true
+]
 };

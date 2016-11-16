@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
 import Contact from './components/pages/contact';
 import About from './components/pages/about';
@@ -14,7 +14,7 @@ const Root = (props) =>
     </div>;
 
 ReactDOM.render(
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
         <Route path="/" component={Root}>
             <IndexRoute component={Home} />
             <Route path="/about" component={About} />
