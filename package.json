@@ -1,7 +1,7 @@
 {
   "name": "staticportfolio",
-  "version": "1.1.0",
-  "description": "Portfolio site craft through the React library.",
+  "version": "1.2.0",
+  "description": "Portfolio site crafted through the React library.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

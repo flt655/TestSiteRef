@@ -21,8 +21,8 @@ class HomeNavLink extends React.Component {
 
     render() {
         var linkStyle = {
-            height: 150,
-            width: 150,
+            height: 165,
+            width: 165,
             transition: '0s ease-in',
             background: this.props.linkImage,
             backgroundSize: 'cover'
@@ -30,12 +30,12 @@ class HomeNavLink extends React.Component {
 
         if (this.state.selected == true) {
             linkStyle['transition'] = '.2s ease-in';
-            linkStyle['height'] = 250;
-            linkStyle['width'] = 250;
-        }else{
+            linkStyle['height'] = 210;
+            linkStyle['width'] = 210;
+        }else {
             linkStyle['transition'] = '.2s ease-in';
-            linkStyle['height'] = 150;
-            linkStyle['width'] = 150;
+            linkStyle['height'] = 165;
+            linkStyle['width'] = 165;
         }
 
         return(
@@ -71,7 +71,7 @@ const Home = () =>
         </div>
         <p style={{fontSize: 10, textAlign: 'center'}}>Site crafted through Javascript's React library.</p>
         <div style={
-            {padding: 40, height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            {height: 275, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
             <div style={{padding: 40}}><HomeNavLink linkText="About" linkTo="/about"
                 linkImage="url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12331712_664353023707816_83732985_n.jpg?ig_cache_key=MTEzMjEyNjE0Mzg0MTgxNzg2Mg%3D%3D.2)"/>
             </div>

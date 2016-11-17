@@ -26702,8 +26702,8 @@
 	        key: 'render',
 	        value: function render() {
 	            var linkStyle = {
-	                height: 150,
-	                width: 150,
+	                height: 165,
+	                width: 165,
 	                transition: '0s ease-in',
 	                background: this.props.linkImage,
 	                backgroundSize: 'cover'
@@ -26711,12 +26711,12 @@
 
 	            if (this.state.selected == true) {
 	                linkStyle['transition'] = '.2s ease-in';
-	                linkStyle['height'] = 250;
-	                linkStyle['width'] = 250;
+	                linkStyle['height'] = 210;
+	                linkStyle['width'] = 210;
 	            } else {
 	                linkStyle['transition'] = '.2s ease-in';
-	                linkStyle['height'] = 150;
-	                linkStyle['width'] = 150;
+	                linkStyle['height'] = 165;
+	                linkStyle['width'] = 165;
 	            }
 
 	            return _react2.default.createElement(
@@ -26777,7 +26777,7 @@
 	        ),
 	        _react2.default.createElement(
 	            'div',
-	            { style: { padding: 40, height: 200, display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+	            { style: { height: 275, display: 'flex', alignItems: 'center', justifyContent: 'center' } },
 	            _react2.default.createElement(
 	                'div',
 	                { style: { padding: 40 } },
