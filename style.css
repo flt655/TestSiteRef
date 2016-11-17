@@ -55,8 +55,9 @@
 
 /*Home page*/
 .home {
-    height: 80%;
-    width: 100%;
+    margin: auto;
+    width: 80%;
+    height: 100%;
 }
 
 .homeCoverImage {
@@ -90,6 +91,12 @@
 }
 
 /*About page*/
+.about {
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
 .aboutPageTitle {
     width: 100%;
     height: 100%;
@@ -105,6 +112,12 @@
 }
 
 /*Contact page*/
+.contact {
+    margin: auto;
+    width: 80%;
+    height: 100%;
+}
+
 .contactPageTitle {
     width: 100%;
     height: 100%;

@@ -26749,46 +26749,50 @@
 	var Home = function Home() {
 	    return _react2.default.createElement(
 	        'div',
-	        { className: 'home' },
+	        null,
 	        _react2.default.createElement(HomeCoverImage, null),
 	        _react2.default.createElement(
 	            'div',
-	            { style: homeText },
-	            _react2.default.createElement(
-	                'p',
-	                { style: { fontSize: 30 } },
-	                'Junior Front-End Engineer'
-	            )
-	        ),
-	        _react2.default.createElement('div', { style: { height: 2, width: '30%', margin: 'auto', background: 'lightgrey' } }),
-	        _react2.default.createElement(
-	            'div',
-	            { style: homeText },
-	            _react2.default.createElement(
-	                'p',
-	                null,
-	                'Javascript, Python, CSS, and HTML'
-	            )
-	        ),
-	        _react2.default.createElement(
-	            'p',
-	            { style: { fontSize: 10, textAlign: 'center' } },
-	            'Site crafted through Javascript\'s React library.'
-	        ),
-	        _react2.default.createElement(
-	            'div',
-	            { style: { height: 275, display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+	            { className: 'home' },
 	            _react2.default.createElement(
 	                'div',
-	                { style: { padding: 40 } },
-	                _react2.default.createElement(HomeNavLink, { linkText: 'About', linkTo: '/about',
-	                    linkImage: 'url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12331712_664353023707816_83732985_n.jpg?ig_cache_key=MTEzMjEyNjE0Mzg0MTgxNzg2Mg%3D%3D.2)' })
+	                { style: homeText },
+	                _react2.default.createElement(
+	                    'p',
+	                    { style: { fontSize: 30 } },
+	                    'Junior Front-End Engineer'
+	                )
+	            ),
+	            _react2.default.createElement('div', { style: { height: 2, width: '30%', margin: 'auto', background: 'lightgrey' } }),
+	            _react2.default.createElement(
+	                'div',
+	                { style: homeText },
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Javascript, Python, CSS, and HTML'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'p',
+	                { style: { fontSize: 10, textAlign: 'center' } },
+	                'Site crafted through Javascript\'s React library.'
 	            ),
 	            _react2.default.createElement(
 	                'div',
-	                { style: { padding: 40 } },
-	                _react2.default.createElement(HomeNavLink, { linkText: 'Contact', linkTo: '/contact',
-	                    linkImage: 'url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14583498_1355303191156017_1801729370398654464_n.jpg?ig_cache_key=MTM4Mjg0NTQwOTIzOTU4NzA1Mw%3D%3D.2)' })
+	                { style: { height: 275, display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: { padding: 40 } },
+	                    _react2.default.createElement(HomeNavLink, { linkText: 'About', linkTo: '/about',
+	                        linkImage: 'url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12331712_664353023707816_83732985_n.jpg?ig_cache_key=MTEzMjEyNjE0Mzg0MTgxNzg2Mg%3D%3D.2)' })
+	                ),
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: { padding: 40 } },
+	                    _react2.default.createElement(HomeNavLink, { linkText: 'Contact', linkTo: '/contact',
+	                        linkImage: 'url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14583498_1355303191156017_1801729370398654464_n.jpg?ig_cache_key=MTM4Mjg0NTQwOTIzOTU4NzA1Mw%3D%3D.2)' })
+	                )
 	            )
 	        )
 	    );
