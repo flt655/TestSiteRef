@@ -6,6 +6,7 @@ import Contact from './components/pages/contact';
 import About from './components/pages/about';
 import Home from './components/pages/home';
 import NavigationBar from './components/core/navbar';
+import NotFound from './components/core/notFound';
 
 const Root = (props) =>
     <div className="root">
@@ -19,6 +20,7 @@ ReactDOM.render(
             <IndexRoute component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="*" component={NotFound} />
         </Route>
     </Router>,
     document.getElementById('react-root'));

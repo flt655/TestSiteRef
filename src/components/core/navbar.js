@@ -14,16 +14,20 @@ class NavLink extends React.Component {
 
     render() {
         var linkStyle = {
-            backgroundColor: '#21252B',
+            backgroundColor: 'white',
             transition: '.0s ease-in'
         }
 
         var linkColor = {
-            color: 'white'
+            color: 'black'
         }
 
         if (this.state.selected == true) {
-            linkStyle['backgroundColor'] = '#2c323a';
+            linkStyle['backgroundColor'] = '#4397B9';
+            linkStyle['transition'] = 'background-color .3s ease-in-out'
+            linkColor['color'] = 'white';
+        } else {
+            linkStyle['backgroundColor'] = 'white';
             linkStyle['transition'] = 'background-color .3s ease-in-out'
             linkColor['color'] = 'black';
         }

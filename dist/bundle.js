@@ -79,6 +79,10 @@
 
 	var _navbar2 = _interopRequireDefault(_navbar);
 
+	var _notFound = __webpack_require__(323);
+
+	var _notFound2 = _interopRequireDefault(_notFound);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var Root = function Root(props) {
@@ -106,7 +110,8 @@
 	        { path: '/', component: Root },
 	        _react2.default.createElement(_reactRouter.IndexRoute, { component: _home2.default }),
 	        _react2.default.createElement(_reactRouter.Route, { path: '/about', component: _about2.default }),
-	        _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _contact2.default })
+	        _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _contact2.default }),
+	        _react2.default.createElement(_reactRouter.Route, { path: '*', component: _notFound2.default })
 	    )
 	), document.getElementById('react-root'));
 
@@ -26722,8 +26727,8 @@
 	        key: 'render',
 	        value: function render() {
 	            var linkStyle = {
-	                height: 165,
-	                width: 165,
+	                height: 300,
+	                width: 400,
 	                transition: '0s ease-in',
 	                background: this.props.linkImage,
 	                backgroundSize: 'cover'
@@ -26731,27 +26736,34 @@
 
 	            if (this.state.selected == true) {
 	                linkStyle['transition'] = '.2s ease-in';
-	                linkStyle['height'] = 210;
-	                linkStyle['width'] = 210;
+	                linkStyle['width'] = 450;
 	            } else {
-	                linkStyle['transition'] = '.2s ease-in';
-	                linkStyle['height'] = 165;
-	                linkStyle['width'] = 165;
+	                linkStyle['transition'] = '.2s ease-out';
+	                linkStyle['width'] = 400;
 	            }
 
 	            return _react2.default.createElement(
-	                _reactRouter.Link,
-	                { to: this.props.linkTo, style: { textDecoration: 'none', color: 'grey' } },
+	                'div',
+	                { style: { boxShadow: '0px 0.1px 3px 0px rgba(0,0,0,0.5)' } },
+	                _react2.default.createElement(
+	                    _reactRouter.Link,
+	                    { to: this.props.linkTo, style: { textDecoration: 'none', color: 'grey' } },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { className: 'homenavlink', style: (0, _assign2.default)({}, { height: 400, width: 400, display: 'flex', alignItems: 'center',
+	                                justifyContent: 'center' }, linkStyle),
+	                            onMouseEnter: this.handleHover, onMouseLeave: this.handleHover },
+	                        _react2.default.createElement(
+	                            'p',
+	                            { className: 'homenavlinktext' },
+	                            this.props.linkText
+	                        )
+	                    )
+	                ),
 	                _react2.default.createElement(
 	                    'div',
-	                    { className: 'homenavlink', style: (0, _assign2.default)({}, { borderRadius: '50%', display: 'flex', alignItems: 'center',
-	                            justifyContent: 'center', boxShadow: '0px 2px 5px 0px rgba(0,0,0,0.75)' }, linkStyle),
-	                        onMouseEnter: this.handleHover, onMouseLeave: this.handleHover },
-	                    _react2.default.createElement(
-	                        'p',
-	                        { className: 'homenavlinktext' },
-	                        this.props.linkText
-	                    )
+	                    { style: { height: 150, width: 300, margin: 'auto', textAlign: 'center' } },
+	                    this.props.linkDesc
 	                )
 	            );
 	        }
@@ -26800,18 +26812,27 @@
 	            ),
 	            _react2.default.createElement(
 	                'div',
-	                { style: { height: 275, display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+	                { style: { height: 600, display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+	                _react2.default.createElement(
+	                    'div',
+	                    { style: { padding: 40 } },
+	                    _react2.default.createElement(HomeNavLink, { linkText: 'Projects', linkTo: '/projects',
+	                        linkDesc: 'My collection of coding projects spanning multiple languages. Projects are primarily stored through Github.',
+	                        linkImage: 'url(http://imgur.com/xqbMAtp.png)' })
+	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: { padding: 40 } },
 	                    _react2.default.createElement(HomeNavLink, { linkText: 'About', linkTo: '/about',
-	                        linkImage: 'url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12331712_664353023707816_83732985_n.jpg?ig_cache_key=MTEzMjEyNjE0Mzg0MTgxNzg2Mg%3D%3D.2)' })
+	                        linkDesc: 'If you would like to take a moment to learn about my personal, and professional life, navigate here.',
+	                        linkImage: 'url(http://imgur.com/pszu3EL.png)' })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
 	                    { style: { padding: 40 } },
 	                    _react2.default.createElement(HomeNavLink, { linkText: 'Contact', linkTo: '/contact',
-	                        linkImage: 'url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14583498_1355303191156017_1801729370398654464_n.jpg?ig_cache_key=MTM4Mjg0NTQwOTIzOTU4NzA1Mw%3D%3D.2)' })
+	                        linkDesc: 'Please contact me for any professional reason, e.g. hiring information, design and developer notes, etc.',
+	                        linkImage: 'url(http://imgur.com/W3xNM2L.png)' })
 	                )
 	            )
 	        )
@@ -28474,16 +28495,20 @@
 	        key: 'render',
 	        value: function render() {
 	            var linkStyle = {
-	                backgroundColor: '#21252B',
+	                backgroundColor: 'white',
 	                transition: '.0s ease-in'
 	            };
 
 	            var linkColor = {
-	                color: 'white'
+	                color: 'black'
 	            };
 
 	            if (this.state.selected == true) {
-	                linkStyle['backgroundColor'] = '#2c323a';
+	                linkStyle['backgroundColor'] = '#4397B9';
+	                linkStyle['transition'] = 'background-color .3s ease-in-out';
+	                linkColor['color'] = 'white';
+	            } else {
+	                linkStyle['backgroundColor'] = 'white';
 	                linkStyle['transition'] = 'background-color .3s ease-in-out';
 	                linkColor['color'] = 'black';
 	            }
@@ -28585,6 +28610,45 @@
 	};
 
 	exports.default = NavigationBar;
+
+/***/ },
+/* 323 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var NotFound = function NotFound() {
+	    return _react2.default.createElement(
+	        'div',
+	        { style: { width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(
+	                'p',
+	                { style: { fontSize: 50 } },
+	                '404...'
+	            )
+	        ),
+	        _react2.default.createElement(
+	            'p',
+	            null,
+	            'Sorry, but the page you are looking for does not exist.'
+	        )
+	    );
+	};
+
+	exports.default = NotFound;
 
 /***/ }
 /******/ ]);

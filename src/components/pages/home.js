@@ -21,8 +21,8 @@ class HomeNavLink extends React.Component {
 
     render() {
         var linkStyle = {
-            height: 165,
-            width: 165,
+            height: 300,
+            width: 400,
             transition: '0s ease-in',
             background: this.props.linkImage,
             backgroundSize: 'cover'
@@ -30,24 +30,28 @@ class HomeNavLink extends React.Component {
 
         if (this.state.selected == true) {
             linkStyle['transition'] = '.2s ease-in';
-            linkStyle['height'] = 210;
-            linkStyle['width'] = 210;
+            linkStyle['width'] = 450;
+
         }else {
-            linkStyle['transition'] = '.2s ease-in';
-            linkStyle['height'] = 165;
-            linkStyle['width'] = 165;
+            linkStyle['transition'] = '.2s ease-out';
+            linkStyle['width'] = 400;
         }
 
         return(
-            <Link to={this.props.linkTo} style={{textDecoration: 'none', color: 'grey'}}>
-                <div className="homenavlink" style={Object.assign({},
-                    {borderRadius: '50%', display: 'flex', alignItems: 'center',
-                    justifyContent: 'center', boxShadow: '0px 2px 5px 0px rgba(0,0,0,0.75)'},
-                    linkStyle)}
-                    onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
-                        <p className="homenavlinktext">{this.props.linkText}</p>
+            <div style={{boxShadow: '0px 0.1px 3px 0px rgba(0,0,0,0.5)'}}>
+                <Link to={this.props.linkTo} style={{textDecoration: 'none', color: 'grey'}}>
+                    <div className="homenavlink" style={Object.assign({},
+                        {height: 400, width: 400, display: 'flex', alignItems: 'center',
+                        justifyContent: 'center'},
+                        linkStyle)}
+                        onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
+                            <p className="homenavlinktext">{this.props.linkText}</p>
+                    </div>
+                </Link>
+                <div style={{height: 150, width: 300, margin: 'auto', textAlign: 'center'}}>
+                    {this.props.linkDesc}
                 </div>
-            </Link>
+            </div>
         )
     }
 }
@@ -72,12 +76,21 @@ const Home = () =>
             </div>
             <p style={{fontSize: 10, textAlign: 'center'}}>Site crafted through Javascript's React library.</p>
             <div style={
-                {height: 275, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                {height: 600, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                <div style={{padding: 40}}><HomeNavLink linkText="Projects" linkTo="/projects"
+                    linkDesc="My collection of coding projects spanning multiple languages. Projects
+                    are primarily stored through Github."
+                    linkImage="url(http://imgur.com/xqbMAtp.png)"/>
+                </div>
                 <div style={{padding: 40}}><HomeNavLink linkText="About" linkTo="/about"
-                    linkImage="url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/12331712_664353023707816_83732985_n.jpg?ig_cache_key=MTEzMjEyNjE0Mzg0MTgxNzg2Mg%3D%3D.2)"/>
+                    linkDesc="If you would like to take a moment to learn about my personal,
+                    and professional life, navigate here."
+                    linkImage="url(http://imgur.com/pszu3EL.png)"/>
                 </div>
                 <div style={{padding: 40}}><HomeNavLink linkText="Contact" linkTo="/contact"
-                    linkImage="url(https://scontent.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/14583498_1355303191156017_1801729370398654464_n.jpg?ig_cache_key=MTM4Mjg0NTQwOTIzOTU4NzA1Mw%3D%3D.2)"/>
+                    linkDesc="Please contact me for any professional reason, e.g. hiring information,
+                    design and developer notes, etc."
+                    linkImage="url(http://imgur.com/W3xNM2L.png)"/>
                 </div>
             </div>
         </div>
