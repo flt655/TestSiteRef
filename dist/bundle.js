@@ -28630,20 +28630,28 @@
 	var NotFound = function NotFound() {
 	    return _react2.default.createElement(
 	        'div',
-	        { style: { width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' } },
+	        { style: { width: '100%', margin: 'auto' } },
 	        _react2.default.createElement(
 	            'div',
-	            null,
+	            { style: { textAlign: 'center' } },
 	            _react2.default.createElement(
-	                'p',
-	                { style: { fontSize: 50 } },
-	                '404...'
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    { style: { fontSize: 50, color: '#4397B9' } },
+	                    '404...'
+	                )
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                null,
+	                _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Sorry, but the page you are looking for does not exist.'
+	                )
 	            )
-	        ),
-	        _react2.default.createElement(
-	            'p',
-	            null,
-	            'Sorry, but the page you are looking for does not exist.'
 	        )
 	    );
 	};
