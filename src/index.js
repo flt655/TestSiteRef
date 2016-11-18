@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
+import Projects from './components/pages/projects';
 import Contact from './components/pages/contact';
 import About from './components/pages/about';
 import Home from './components/pages/home';
@@ -20,6 +21,7 @@ ReactDOM.render(
             <IndexRoute component={Home} />
             <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
+            <Route path="/projects" component={Projects} />
             <Route path="*" component={NotFound} />
         </Route>
     </Router>,

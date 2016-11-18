@@ -74,6 +74,7 @@ const NavigationBar = () =>
     <div>
         <div className="navbar">
             <NavLink linkDir="/" linkText="Home" />
+            <NavLink linkDir="/projects" linkText="Projects" />
             <NavLink linkDir="/about" linkText="About" />
             <NavLink linkDir="/contact" linkText="Contact" />
         </div>

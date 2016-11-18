@@ -18,11 +18,6 @@ const About = () =>
                 transformed me into the PC hobbyiest and programmer I am today.
             </p>
             <p style={{textAlign: 'left'}}>
-                I enrolled in several mathematics, art, design, and journalism
-                courses through out my high school career, and graduated with an
-                honorary award in journalism and English.
-            </p>
-            <p style={{textAlign: 'left'}}>
                 Beside my interests in technology, I spend my time as a cook for
                 a local restaurant and playing a small variety of instruments --
                 including the guitar, ukulele and piano.
