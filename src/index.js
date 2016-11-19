@@ -51,6 +51,7 @@ class Root extends React.Component {
                         <div><p>Sorry, but it seems you're on a mobile device, and my
                             mobile systems are not yet operational. If you would like
                             to view the site, visit it via a desktop browser.</p></div>
+                        </div>
                     </div>
                 </div>
             );
