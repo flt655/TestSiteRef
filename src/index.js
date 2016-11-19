@@ -47,11 +47,10 @@ class Root extends React.Component {
                 <div style={{width: '100%', margin: 'auto'}}>
                     <div style={{textAlign: 'center'}}>
                         <div><p style={{fontSize: 50, color: '#C94E3E'}}>404...</p></div>
-                        <div><p style={{fontSize: 25, color: '#4397B9'}}>MOBILE SITE UNDER CONSTRUCTION</p>
+                        <div><p style={{fontSize: 25, color: '#4397B9'}}>MOBILE SITE UNDER CONSTRUCTION</p></div>
                         <div><p>Sorry, but it seems you're on a mobile device, and my
                             mobile systems are not yet operational. If you would like
                             to view the site, visit it via a desktop browser.</p></div>
-                        </div>
                     </div>
                 </div>
             );
