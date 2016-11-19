@@ -52,7 +52,7 @@ class Root extends React.Component {
                             mobile systems are not yet operational. If you would like
                             to view the site, visit it via a desktop browser.</p></div>
                     </div>
-                </div>;
+                </div>
             );
         }
     }
