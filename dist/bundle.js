@@ -157,8 +157,38 @@
 	            } else {
 	                return _react2.default.createElement(
 	                    'div',
-	                    null,
-	                    'Sorry, you\'re on mobile...'
+	                    { style: { width: '100%', margin: 'auto' } },
+	                    _react2.default.createElement(
+	                        'div',
+	                        { style: { textAlign: 'center' } },
+	                        _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            _react2.default.createElement(
+	                                'p',
+	                                { style: { fontSize: 50, color: '#C94E3E' } },
+	                                '404...'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            _react2.default.createElement(
+	                                'p',
+	                                { style: { fontSize: 25, color: '#4397B9' } },
+	                                'MOBILE SITE UNDER CONSTRUCTION'
+	                            )
+	                        ),
+	                        _react2.default.createElement(
+	                            'div',
+	                            null,
+	                            _react2.default.createElement(
+	                                'p',
+	                                null,
+	                                'Sorry, but it seems you\'re on a mobile device, and my mobile systems are not yet operational. If you would like to view the site, visit it via a desktop browser.'
+	                            )
+	                        )
+	                    )
 	                );
 	            }
 	        }
