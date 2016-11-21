@@ -7,7 +7,7 @@ const Projects = () =>
             <div className="projectsPageTitle">
                 <p style={{fontSize: 30, color: '#C94E3E'}}>Projects</p>
             </div>
-            <div style={{height: 2, width: '30%', margin: 'auto', background: 'lightgrey'}}></div>
+            <div style={{height: 1, width: '30%', margin: 'auto', background: 'lightgrey'}}></div>
             <div style={{padding: 15}}></div>
             <div className="projectsLinks">
                 <div style={{padding: 40}}><NavLink linkText="Space Travel Time Calculator" linkTo="https://github.com/staticCoffee/space-travel-time-calculator"

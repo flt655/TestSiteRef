@@ -5,7 +5,7 @@ const About = () =>
         <div className="aboutPageTitle">
             <p style={{fontSize: 30, color: '#C94E3E'}}>About</p>
         </div>
-        <div style={{height: 2, width: '30%', margin: 'auto', background: 'lightgrey'}}></div>
+        <div style={{height: 1, width: '30%', margin: 'auto', background: 'lightgrey'}}></div>
         <div className="aboutPageBody">
             <p style={{padding: 10, fontSize: 20, color: '#4397B9'}}>Personal Life</p>
             <p style={{textAlign: 'left'}}>

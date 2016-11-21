@@ -155,10 +155,27 @@
 
 /*CSS animations*/
 @keyframes foot {
-    from {
-        background-color: #4397B9;
-    }
-    to {
-        background-color: #C94E3E;
-    }
+    0% {background-color: #4397B9;}
+    50% {background-color: #C94E3E;}
+    100% {background-color: #4397B9;}
+}
+
+@keyframes contactLink {
+    0% {color: #4397B9;}
+    50% {color: #C94E3E;}
+    100% {color: #4397B9;}
+}
+
+.footLink:hover {
+    transition: 2s ease-in-out;
+    animation-name: foot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.contactLink:hover {
+    transition: 2s ease-in-out;
+    animation-name: contactLink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }

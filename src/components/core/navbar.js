@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 
-class NavLink extends React.Component {
+class NavbarLink extends React.Component {
     constructor() {
         super();
         this.state = {selected: false};
@@ -23,12 +23,12 @@ class NavLink extends React.Component {
         }
 
         if (this.state.selected == true) {
-            linkStyle['backgroundColor'] = '#4397B9';
-            linkStyle['transition'] = 'background-color .3s ease-in-out'
+            linkStyle['backgroundColor'] = 'rgba(80, 161, 89, .75)';
+            linkStyle['transition'] = 'background-color .5s ease-in-out'
             linkColor['color'] = 'white';
         } else {
             linkStyle['backgroundColor'] = 'white';
-            linkStyle['transition'] = 'background-color .3s ease-in-out'
+            linkStyle['transition'] = 'background-color .5s ease-in-out'
             linkColor['color'] = 'black';
         }
 
@@ -50,12 +50,13 @@ class NavLink extends React.Component {
 var navFootStyle = {
     color: 'white',
     paddingLeft: 15,
-    paddingRight: 15
+    paddingRight: 15,
+    fontSize: 22
 }
 
 const NavFoot = () =>
     <div className="navfoot">
-        <p style={Object.assign({}, {fontSize: 22}, navFootStyle)}>
+        <p style={Object.assign({}, {}, navFootStyle)}>
             static<span style={{color: '#C94E3E'}}>Coffee</span>
         </p>
         <a className="footLink"
@@ -73,10 +74,10 @@ const NavFoot = () =>
 const NavigationBar = () =>
     <div>
         <div className="navbar">
-            <NavLink linkDir="/" linkText="Home" />
-            <NavLink linkDir="/projects" linkText="Projects" />
-            <NavLink linkDir="/about" linkText="About" />
-            <NavLink linkDir="/contact" linkText="Contact" />
+            <NavbarLink linkDir="/" linkText="Home" />
+            <NavbarLink linkDir="/projects" linkText="Projects" />
+            <NavbarLink linkDir="/about" linkText="About" />
+            <NavbarLink linkDir="/contact" linkText="Contact" />
         </div>
         <div><NavFoot /></div>
     </div>;

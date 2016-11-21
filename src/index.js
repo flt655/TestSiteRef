@@ -9,8 +9,7 @@ import Home from './components/pages/home';
 import NavigationBar from './components/core/navbar';
 import NotFound from './components/core/notFound';
 
-
-class Root extends React.Component {
+export default class Root extends React.Component {
     constructor() {
         super();
         this.state = {mobile: false}
