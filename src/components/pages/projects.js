@@ -10,12 +10,14 @@ const Projects = () =>
             <div style={{height: 1, width: '30%', margin: 'auto', background: 'lightgrey'}}></div>
             <div style={{padding: 15}}></div>
             <div className="projectsLinks">
-                <div style={{padding: 40}}><NavLink linkText="Space Travel Time Calculator" linkTo="https://github.com/staticCoffee/space-travel-time-calculator"
+                <div style={{paddingLeft: 40, paddingRight: 40}}><NavLink linkText="Projects" linkTo="https://github.com/staticCoffee/space-travel-time-calculator"
                     linkDesc="Calculates how long it would take to travel from the sun to any given planet in the solar
                             system using the speed of the New Horizons probe, and the speed of light."
                     linkImage="url(http://imgur.com/UxPMh1h.png)"
-                    internal={false}
-                    height={400} width={600}/>
+                    internal={true}
+                    height={350} width={450}
+                    backgroundSize="cover"
+                    repeat="no-repeat"/>
                 </div>
             </div>
         </div>;

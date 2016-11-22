@@ -17,24 +17,35 @@ export default class NavLink extends React.Component {
             height: this.props.height,
             width: this.props.width,
             transition: '0s ease-in',
+            borderRadius: '15px 50px',
             background: this.props.linkImage,
             backgroundSize: this.props.backgroundSize,
             backgroundRepeat: this.props.repeat
         }
 
+        var containerStyle = {
+            boxShadow: '0px 0.1px 3px 0px rgba(0,0,0,0.5)',
+            borderRadius: '15px 50px',
+            transition: 'border-radius .0s ease-in'
+        }
+
         if (this.state.selected == true) {
-            linkStyle['transition'] = 'width .3s ease-in';
-            linkStyle['width'] = this.props.width + 50;
+            linkStyle['transition'] = 'border-radius .25s ease-in';
+            linkStyle['borderRadius'] = '0%';
+            containerStyle['transition'] = 'border-radius .25s ease-in';
+            containerStyle['borderRadius'] = '0%';
 
 
         }else {
-            linkStyle['transition'] = 'width .3s ease-out';
-            linkStyle['width'] = this.props.width;
+            linkStyle['transition'] = 'border-radius .25s ease-out';
+            linkStyle['borderRadius'] = '15px 50px';
+            containerStyle['transition'] = 'border-radius .25s ease-out';
+            containerStyle['borderRadius'] = '15px 50px';
         }
 
         if (this.props.internal == true) {
             return(
-                <div style={{boxShadow: '0px 0.1px 3px 0px rgba(0,0,0,0.5)'}}>
+                <div style={containerStyle}>
                     <Link to={this.props.linkTo} style={{textDecoration: 'none', color: 'grey'}} target={this.props.target}>
                         <div className="navlink" style={Object.assign({},
                             {height: 300, width: 400, display: 'flex', alignItems: 'center',

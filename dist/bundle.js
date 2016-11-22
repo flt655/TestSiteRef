@@ -28452,12 +28452,14 @@
 	            { className: 'projectsLinks' },
 	            _react2.default.createElement(
 	                'div',
-	                { style: { padding: 40 } },
-	                _react2.default.createElement(_navLink2.default, { linkText: 'Space Travel Time Calculator', linkTo: 'https://github.com/staticCoffee/space-travel-time-calculator',
+	                { style: { paddingLeft: 40, paddingRight: 40 } },
+	                _react2.default.createElement(_navLink2.default, { linkText: 'Projects', linkTo: 'https://github.com/staticCoffee/space-travel-time-calculator',
 	                    linkDesc: 'Calculates how long it would take to travel from the sun to any given planet in the solar system using the speed of the New Horizons probe, and the speed of light.',
 	                    linkImage: 'url(http://imgur.com/UxPMh1h.png)',
-	                    internal: false,
-	                    height: 400, width: 600 })
+	                    internal: true,
+	                    height: 350, width: 450,
+	                    backgroundSize: 'cover',
+	                    repeat: 'no-repeat' })
 	            )
 	        )
 	    );
@@ -28532,23 +28534,34 @@
 	                height: this.props.height,
 	                width: this.props.width,
 	                transition: '0s ease-in',
+	                borderRadius: '15px 50px',
 	                background: this.props.linkImage,
 	                backgroundSize: this.props.backgroundSize,
 	                backgroundRepeat: this.props.repeat
 	            };
 
+	            var containerStyle = {
+	                boxShadow: '0px 0.1px 3px 0px rgba(0,0,0,0.5)',
+	                borderRadius: '15px 50px',
+	                transition: 'border-radius .0s ease-in'
+	            };
+
 	            if (this.state.selected == true) {
-	                linkStyle['transition'] = 'width .3s ease-in';
-	                linkStyle['width'] = this.props.width + 50;
+	                linkStyle['transition'] = 'border-radius .25s ease-in';
+	                linkStyle['borderRadius'] = '0%';
+	                containerStyle['transition'] = 'border-radius .25s ease-in';
+	                containerStyle['borderRadius'] = '0%';
 	            } else {
-	                linkStyle['transition'] = 'width .3s ease-out';
-	                linkStyle['width'] = this.props.width;
+	                linkStyle['transition'] = 'border-radius .25s ease-out';
+	                linkStyle['borderRadius'] = '15px 50px';
+	                containerStyle['transition'] = 'border-radius .25s ease-out';
+	                containerStyle['borderRadius'] = '15px 50px';
 	            }
 
 	            if (this.props.internal == true) {
 	                return _react2.default.createElement(
 	                    'div',
-	                    { style: { boxShadow: '0px 0.1px 3px 0px rgba(0,0,0,0.5)' } },
+	                    { style: containerStyle },
 	                    _react2.default.createElement(
 	                        _reactRouter.Link,
 	                        { to: this.props.linkTo, style: { textDecoration: 'none', color: 'grey' }, target: this.props.target },
