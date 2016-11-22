@@ -19,7 +19,7 @@ var homeText = {
 
 const Home = () =>
     <div>
-        <HomeCoverImage />
+        <div><HomeCoverImage /></div>
         <div className="home">
             <div style={homeText}>
                 <p style={{fontSize: 30}}>Junior Front-End Engineer</p>
@@ -34,17 +34,18 @@ const Home = () =>
                 <div style={{paddingLeft: 40, paddingRight: 40}}><NavLink linkText="Projects" linkTo="/projects"
                     linkDesc="My collection of coding projects spanning multiple languages. Projects
                     are primarily stored through Github."
-                    linkImage="url(http://imgur.com/2RkbXa8.png)"
+                    linkImage="url(https://images.pexels.com/photos/47425/pexels-photo-47425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)"
                     internal={true}
-                    height={200} width={300}
-                    backgroundSize="cover"/>
+                    height={250} width={350}
+                    backgroundSize="cover"
+                    repeat="no-repeat"/>
                 </div>
                 <div style={{paddingLeft: 40, paddingRight: 40}}><NavLink linkText="About" linkTo="/about"
                     linkDesc="If you would like to take a moment to learn about my personal,
                     and professional life, navigate here."
                     linkImage="url(http://imgur.com/pszu3EL.png)"
                     internal={true}
-                    height={200} width={300}
+                    height={250} width={350}
                     backgroundSize="cover"
                     repeat="no-repeat"/>
                 </div>
@@ -53,7 +54,7 @@ const Home = () =>
                     design and developer notes, etc."
                     linkImage="url(http://imgur.com/W3xNM2L.png)"
                     internal={true}
-                    height={200} width={300}
+                    height={250} width={350}
                     backgroundSize="cover"
                     repeat="no-repeat"/>
                 </div>

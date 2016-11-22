@@ -28538,10 +28538,10 @@
 	            };
 
 	            if (this.state.selected == true) {
-	                linkStyle['transition'] = '.2s ease-in';
+	                linkStyle['transition'] = 'width .3s ease-in';
 	                linkStyle['width'] = this.props.width + 50;
 	            } else {
-	                linkStyle['transition'] = '.2s ease-out';
+	                linkStyle['transition'] = 'width .3s ease-out';
 	                linkStyle['width'] = this.props.width;
 	            }
 
@@ -28686,7 +28686,7 @@
 	var linkStyle = {
 	    fontSize: 20,
 	    textDecoration: 'none',
-	    color: '#4397B9',
+	    color: 'rgba(28, 88, 138, 1)',
 	    padding: 10
 	};
 
@@ -28712,7 +28712,7 @@
 	                { style: { fontSize: 20 } },
 	                _react2.default.createElement(
 	                    'span',
-	                    { style: { color: '#4397B9' } },
+	                    { style: { color: 'rgba(28, 88, 138, 1)' } },
 	                    'Email: '
 	                ),
 	                'staticcoffee@programmer.net'
@@ -28889,7 +28889,11 @@
 	    return _react2.default.createElement(
 	        'div',
 	        null,
-	        _react2.default.createElement(HomeCoverImage, null),
+	        _react2.default.createElement(
+	            'div',
+	            null,
+	            _react2.default.createElement(HomeCoverImage, null)
+	        ),
 	        _react2.default.createElement(
 	            'div',
 	            { className: 'home' },
@@ -28925,10 +28929,11 @@
 	                    { style: { paddingLeft: 40, paddingRight: 40 } },
 	                    _react2.default.createElement(_navLink2.default, { linkText: 'Projects', linkTo: '/projects',
 	                        linkDesc: 'My collection of coding projects spanning multiple languages. Projects are primarily stored through Github.',
-	                        linkImage: 'url(http://imgur.com/2RkbXa8.png)',
+	                        linkImage: 'url(https://images.pexels.com/photos/47425/pexels-photo-47425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)',
 	                        internal: true,
-	                        height: 200, width: 300,
-	                        backgroundSize: 'cover' })
+	                        height: 250, width: 350,
+	                        backgroundSize: 'cover',
+	                        repeat: 'no-repeat' })
 	                ),
 	                _react2.default.createElement(
 	                    'div',
@@ -28937,7 +28942,7 @@
 	                        linkDesc: 'If you would like to take a moment to learn about my personal, and professional life, navigate here.',
 	                        linkImage: 'url(http://imgur.com/pszu3EL.png)',
 	                        internal: true,
-	                        height: 200, width: 300,
+	                        height: 250, width: 350,
 	                        backgroundSize: 'cover',
 	                        repeat: 'no-repeat' })
 	                ),
@@ -28948,7 +28953,7 @@
 	                        linkDesc: 'Please contact me for any professional reason, e.g. hiring information, design and developer notes, etc.',
 	                        linkImage: 'url(http://imgur.com/W3xNM2L.png)',
 	                        internal: true,
-	                        height: 200, width: 300,
+	                        height: 250, width: 350,
 	                        backgroundSize: 'cover',
 	                        repeat: 'no-repeat' })
 	                )
@@ -29028,17 +29033,28 @@
 	            };
 
 	            var linkColor = {
-	                color: 'black'
+	                color: 'black',
+	                transition: '.0s ease-in'
+	            };
+	            var colorLinkStyle = {
+	                color: '#C94E3E',
+	                transition: '.0s ease-in'
 	            };
 
 	            if (this.state.selected == true) {
-	                linkStyle['backgroundColor'] = 'rgba(80, 161, 89, .75)';
+	                linkStyle['backgroundColor'] = 'rgba(201, 78, 62, .8)';
 	                linkStyle['transition'] = 'background-color .5s ease-in-out';
+	                linkColor['transition'] = 'color .2s ease-in-out';
+	                colorLinkStyle['transition'] = 'color .3s ease-in-out';
 	                linkColor['color'] = 'white';
+	                colorLinkStyle['color'] = 'black';
 	            } else {
 	                linkStyle['backgroundColor'] = 'white';
 	                linkStyle['transition'] = 'background-color .5s ease-in-out';
+	                linkColor['transition'] = 'color .2s ease-in-out';
+	                colorLinkStyle['transition'] = 'color .3s ease-in-out';
 	                linkColor['color'] = 'black';
+	                colorLinkStyle['color'] = '#C94E3E';
 	            }
 
 	            return _react2.default.createElement(
@@ -29055,7 +29071,12 @@
 	                        _react2.default.createElement(
 	                            'div',
 	                            null,
-	                            this.props.linkText
+	                            this.props.linkText,
+	                            _react2.default.createElement(
+	                                'span',
+	                                { style: colorLinkStyle },
+	                                this.props.linkColorText
+	                            )
 	                        )
 	                    )
 	                )
@@ -29076,16 +29097,6 @@
 	    return _react2.default.createElement(
 	        'div',
 	        { className: 'navfoot' },
-	        _react2.default.createElement(
-	            'p',
-	            { style: (0, _assign2.default)({}, {}, navFootStyle) },
-	            'static',
-	            _react2.default.createElement(
-	                'span',
-	                { style: { color: '#C94E3E' } },
-	                'Coffee'
-	            )
-	        ),
 	        _react2.default.createElement(
 	            'a',
 	            { className: 'footLink',
@@ -29126,7 +29137,7 @@
 	        _react2.default.createElement(
 	            'div',
 	            { className: 'navbar' },
-	            _react2.default.createElement(NavbarLink, { linkDir: '/', linkText: 'Home' }),
+	            _react2.default.createElement(NavbarLink, { linkDir: '/', linkText: 'static', linkColorText: 'Coffee' }),
 	            _react2.default.createElement(NavbarLink, { linkDir: '/projects', linkText: 'Projects' }),
 	            _react2.default.createElement(NavbarLink, { linkDir: '/about', linkText: 'About' }),
 	            _react2.default.createElement(NavbarLink, { linkDir: '/contact', linkText: 'Contact' })

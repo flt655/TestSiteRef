@@ -23,12 +23,12 @@ export default class NavLink extends React.Component {
         }
 
         if (this.state.selected == true) {
-            linkStyle['transition'] = '.2s ease-in';
+            linkStyle['transition'] = 'width .3s ease-in';
             linkStyle['width'] = this.props.width + 50;
 
 
         }else {
-            linkStyle['transition'] = '.2s ease-out';
+            linkStyle['transition'] = 'width .3s ease-out';
             linkStyle['width'] = this.props.width;
         }
 

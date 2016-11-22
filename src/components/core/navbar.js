@@ -19,17 +19,28 @@ class NavbarLink extends React.Component {
         }
 
         var linkColor = {
-            color: 'black'
+            color: 'black',
+            transition: '.0s ease-in'
+        }
+        var colorLinkStyle = {
+            color: '#C94E3E',
+            transition: '.0s ease-in'
         }
 
         if (this.state.selected == true) {
-            linkStyle['backgroundColor'] = 'rgba(80, 161, 89, .75)';
+            linkStyle['backgroundColor'] = 'rgba(201, 78, 62, .8)';
             linkStyle['transition'] = 'background-color .5s ease-in-out'
+            linkColor['transition'] = 'color .2s ease-in-out'
+            colorLinkStyle['transition'] = 'color .3s ease-in-out'
             linkColor['color'] = 'white';
+            colorLinkStyle['color'] = 'black';
         } else {
             linkStyle['backgroundColor'] = 'white';
             linkStyle['transition'] = 'background-color .5s ease-in-out'
+            linkColor['transition'] = 'color .2s ease-in-out'
+            colorLinkStyle['transition'] = 'color .3s ease-in-out'
             linkColor['color'] = 'black';
+            colorLinkStyle['color'] = '#C94E3E';
         }
 
         return(
@@ -39,7 +50,9 @@ class NavbarLink extends React.Component {
                         Object.assign({}, {fontSize: 20, textDecoration: 'none'}, linkColor)}
                         to={this.props.linkDir}>
                     <div className="navLink">
-                        <div>{this.props.linkText}</div>
+                        <div>{this.props.linkText}<span style={colorLinkStyle}>
+                            {this.props.linkColorText}
+                        </span></div>
                     </div>
                 </Link>
             </div>
@@ -56,9 +69,6 @@ var navFootStyle = {
 
 const NavFoot = () =>
     <div className="navfoot">
-        <p style={Object.assign({}, {}, navFootStyle)}>
-            static<span style={{color: '#C94E3E'}}>Coffee</span>
-        </p>
         <a className="footLink"
             href="https://medium.com/@staticcoffee">Medium Blog</a>
         <a className="footLink"
@@ -71,10 +81,11 @@ const NavFoot = () =>
             href="https://www.instagram.com/brycecrisppy/?hl=en">Instagram</a>
     </div>;
 
+
 const NavigationBar = () =>
     <div>
         <div className="navbar">
-            <NavbarLink linkDir="/" linkText="Home" />
+            <NavbarLink linkDir="/" linkText="static" linkColorText="Coffee"/>
             <NavbarLink linkDir="/projects" linkText="Projects" />
             <NavbarLink linkDir="/about" linkText="About" />
             <NavbarLink linkDir="/contact" linkText="Contact" />

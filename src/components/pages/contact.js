@@ -3,7 +3,7 @@ import React from 'react';
 var linkStyle = {
     fontSize: 20,
     textDecoration: 'none',
-    color: '#4397B9',
+    color: 'rgba(28, 88, 138, 1)',
     padding: 10
 }
 
@@ -15,7 +15,7 @@ const Contact = () =>
         <div style={{height: 1, width: '30%', margin: 'auto', background: 'lightgrey'}}></div>
         <div className="contactPageBody">
             <p style={{fontSize: 20}}>
-                <span style={{color: '#4397B9'}}>Email: </span>
+                <span style={{color: 'rgba(28, 88, 138, 1)'}}>Email: </span>
                 staticcoffee@programmer.net
             </p>
         <div style={{textAlign: 'center'}}>
