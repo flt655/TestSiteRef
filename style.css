@@ -70,6 +70,8 @@
     animation-name: homecoverimage;
     animation-duration: 2s;
     animation-fill-mode: forwards;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .homeCoverText {
