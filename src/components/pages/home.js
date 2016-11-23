@@ -14,7 +14,7 @@ var homeText = {
     height: '100%',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
 }
 
 const Home = () =>
@@ -22,18 +22,20 @@ const Home = () =>
         <div><HomeCoverImage /></div>
         <div className="home">
             <div style={homeText}>
-                <p style={{fontSize: 30}}>Junior Front-End Engineer</p>
+                <p style={{fontSize: 30}}>Junior Front-End Developer</p>
             </div>
             <div style={{height: 1, width: '30%', margin: 'auto', background: 'lightgrey'}}></div>
-            <div style={homeText}>
-                <p>Javascript, Python, CSS, and HTML</p>
+            <div style={Object.assign({}, {paddingBottom: 90}, homeText)}>
+                <p style={{fontSize: 20}}>
+                    Javascript<span style={{color: 'rgba(28, 88, 138, 1)', fontSize: 20}}>|</span>
+                    Python<span style={{color: 'rgba(28, 88, 138, 1)',fontSize: 20}}>|</span>
+                    HTML / CSS
+                </p>
             </div>
-            <p style={{fontSize: 10, textAlign: 'center'}}>Site crafted through Javascript's React library.</p>
             <div style={
                 {height: 500, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{paddingLeft: 40, paddingRight: 40}}><NavLink linkText="Projects" linkTo="/projects"
-                    linkDesc="My collection of coding projects spanning multiple languages. Projects
-                    are primarily stored through Github."
+                    linkDesc="A (small) collection of coding projects spanning multiple languages."
                     linkImage="url(https://images.pexels.com/photos/47425/pexels-photo-47425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)"
                     internal={true}
                     height={250} width={350}
@@ -41,8 +43,7 @@ const Home = () =>
                     repeat="no-repeat"/>
                 </div>
                 <div style={{paddingLeft: 40, paddingRight: 40}}><NavLink linkText="About" linkTo="/about"
-                    linkDesc="If you would like to take a moment to learn about my personal,
-                    and professional life, navigate here."
+                    linkDesc="Learn a little bit about my life."
                     linkImage="url(http://imgur.com/pszu3EL.png)"
                     internal={true}
                     height={250} width={350}
@@ -50,8 +51,7 @@ const Home = () =>
                     repeat="no-repeat"/>
                 </div>
                 <div style={{paddingLeft: 40, paddingRight: 40}}><NavLink linkText="Contact" linkTo="/contact"
-                    linkDesc="Please contact me for any professional reason, e.g. hiring information,
-                    design and developer notes, etc."
+                    linkDesc="Contact me for hiring, collaberation opportunites, or if you just want to ask me a few questions."
                     linkImage="url(http://imgur.com/W3xNM2L.png)"
                     internal={true}
                     height={250} width={350}

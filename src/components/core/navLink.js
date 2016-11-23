@@ -30,16 +30,16 @@ export default class NavLink extends React.Component {
         }
 
         if (this.state.selected == true) {
-            linkStyle['transition'] = 'border-radius .25s ease-in';
+            linkStyle['transition'] = 'border-radius .3s ease-in';
             linkStyle['borderRadius'] = '0%';
-            containerStyle['transition'] = 'border-radius .25s ease-in';
+            containerStyle['transition'] = 'border-radius .3s ease-in';
             containerStyle['borderRadius'] = '0%';
 
 
         }else {
-            linkStyle['transition'] = 'border-radius .25s ease-out';
+            linkStyle['transition'] = 'border-radius .3s ease-out';
             linkStyle['borderRadius'] = '15px 50px';
-            containerStyle['transition'] = 'border-radius .25s ease-out';
+            containerStyle['transition'] = 'border-radius .3s ease-out';
             containerStyle['borderRadius'] = '15px 50px';
         }
 
@@ -55,8 +55,8 @@ export default class NavLink extends React.Component {
                                 <p className="navlinktext">{this.props.linkText}</p>
                         </div>
                     </Link>
-                    <div style={{height: this.props.height / 1.5, width: 300, margin: 'auto', textAlign: 'center'}}>
-                        {this.props.linkDesc}
+                    <div style={{height: this.props.height, width: 300, margin: 'auto', textAlign: 'left'}}>
+                        <p>{this.props.linkDesc}</p>
                     </div>
                 </div>
             );
@@ -65,14 +65,16 @@ export default class NavLink extends React.Component {
                 <div style={{boxShadow: '0px 0.1px 3px 0px rgba(0,0,0,0.5)'}}>
                     <a href={this.props.linkTo} style={{textDecoration: 'none', color: 'grey'}}>
                         <div className="navlink" style={Object.assign({},
-                            {height: 400, width: 400, display: 'flex', alignItems: 'center',
+                            {height: 300, width: 400, display: 'flex', alignItems: 'center',
                             justifyContent: 'center'},
                             linkStyle)}
                             onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}>
                                 <p className="navlinktext">{this.props.linkText}</p>
                         </div>
                     </a>
-                    <div style={{height: this.props.height / 2, width: 300, margin: 'auto', textAlign: 'center'}}>
+                    <div style={
+                        {height: this.props.height, width: 300, margin: 'auto',
+                        textAlign: 'left'}}>
                         {this.props.linkDesc}
                     </div>
                 </div>

@@ -170,7 +170,7 @@
 	                            null,
 	                            _react2.default.createElement(
 	                                'p',
-	                                { style: { fontSize: 50, color: '#C94E3E' } },
+	                                { style: { fontSize: 50, color: 'rgba(28, 88, 138, 1)' } },
 	                                '404...'
 	                            )
 	                        ),
@@ -28446,18 +28446,29 @@
 	            )
 	        ),
 	        _react2.default.createElement('div', { style: { height: 1, width: '30%', margin: 'auto', background: 'lightgrey' } }),
-	        _react2.default.createElement('div', { style: { padding: 15 } }),
+	        _react2.default.createElement('div', { style: { padding: 25 } }),
 	        _react2.default.createElement(
 	            'div',
 	            { className: 'projectsLinks' },
 	            _react2.default.createElement(
 	                'div',
 	                { style: { paddingLeft: 40, paddingRight: 40 } },
-	                _react2.default.createElement(_navLink2.default, { linkText: 'Projects', linkTo: 'https://github.com/staticCoffee/space-travel-time-calculator',
-	                    linkDesc: 'Calculates how long it would take to travel from the sun to any given planet in the solar system using the speed of the New Horizons probe, and the speed of light.',
+	                _react2.default.createElement(_navLink2.default, { linkText: 'Space Travel Calculator', linkTo: 'https://github.com/staticCoffee/space-travel-time-calculator',
+	                    linkDesc: 'Calculates the time it would take to travel from the sun to any given planet in the solar system using the speed of the New Horizons probe, and the speed of light.',
 	                    linkImage: 'url(http://imgur.com/UxPMh1h.png)',
 	                    internal: true,
-	                    height: 350, width: 450,
+	                    height: 300, width: 400,
+	                    backgroundSize: 'cover',
+	                    repeat: 'no-repeat' })
+	            ),
+	            _react2.default.createElement(
+	                'div',
+	                { style: { paddingLeft: 40, paddingRight: 40 } },
+	                _react2.default.createElement(_navLink2.default, { linkText: 'Portfolio', linkTo: 'https://github.com/staticCoffee/staticcoffee.github.io',
+	                    linkDesc: 'The website you are currently visiting. Check out the code behind it!',
+	                    linkImage: 'url(http://imgur.com/7jrBP4U.png)',
+	                    internal: true,
+	                    height: 300, width: 400,
 	                    backgroundSize: 'cover',
 	                    repeat: 'no-repeat' })
 	            )
@@ -28547,14 +28558,14 @@
 	            };
 
 	            if (this.state.selected == true) {
-	                linkStyle['transition'] = 'border-radius .25s ease-in';
+	                linkStyle['transition'] = 'border-radius .3s ease-in';
 	                linkStyle['borderRadius'] = '0%';
-	                containerStyle['transition'] = 'border-radius .25s ease-in';
+	                containerStyle['transition'] = 'border-radius .3s ease-in';
 	                containerStyle['borderRadius'] = '0%';
 	            } else {
-	                linkStyle['transition'] = 'border-radius .25s ease-out';
+	                linkStyle['transition'] = 'border-radius .3s ease-out';
 	                linkStyle['borderRadius'] = '15px 50px';
-	                containerStyle['transition'] = 'border-radius .25s ease-out';
+	                containerStyle['transition'] = 'border-radius .3s ease-out';
 	                containerStyle['borderRadius'] = '15px 50px';
 	            }
 
@@ -28579,8 +28590,12 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: { height: this.props.height / 1.5, width: 300, margin: 'auto', textAlign: 'center' } },
-	                        this.props.linkDesc
+	                        { style: { height: this.props.height, width: 300, margin: 'auto', textAlign: 'left' } },
+	                        _react2.default.createElement(
+	                            'p',
+	                            null,
+	                            this.props.linkDesc
+	                        )
 	                    )
 	                );
 	            } else {
@@ -28592,7 +28607,7 @@
 	                        { href: this.props.linkTo, style: { textDecoration: 'none', color: 'grey' } },
 	                        _react2.default.createElement(
 	                            'div',
-	                            { className: 'navlink', style: (0, _assign2.default)({}, { height: 400, width: 400, display: 'flex', alignItems: 'center',
+	                            { className: 'navlink', style: (0, _assign2.default)({}, { height: 300, width: 400, display: 'flex', alignItems: 'center',
 	                                    justifyContent: 'center' }, linkStyle),
 	                                onMouseEnter: this.handleHover, onMouseLeave: this.handleHover },
 	                            _react2.default.createElement(
@@ -28604,7 +28619,8 @@
 	                    ),
 	                    _react2.default.createElement(
 	                        'div',
-	                        { style: { height: this.props.height / 2, width: 300, margin: 'auto', textAlign: 'center' } },
+	                        { style: { height: this.props.height, width: 300, margin: 'auto',
+	                                textAlign: 'left' } },
 	                        this.props.linkDesc
 	                    )
 	                );
@@ -28783,11 +28799,31 @@
 /* 333 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _getPrototypeOf = __webpack_require__(2);
+
+	var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+	var _classCallCheck2 = __webpack_require__(28);
+
+	var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+	var _createClass2 = __webpack_require__(29);
+
+	var _createClass3 = _interopRequireDefault(_createClass2);
+
+	var _possibleConstructorReturn2 = __webpack_require__(33);
+
+	var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+	var _inherits2 = __webpack_require__(80);
+
+	var _inherits3 = _interopRequireDefault(_inherits2);
 
 	var _react = __webpack_require__(88);
 
@@ -28795,61 +28831,106 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var About = function About() {
-	    return _react2.default.createElement(
-	        "div",
-	        { className: "about" },
-	        _react2.default.createElement(
-	            "div",
-	            { className: "aboutPageTitle" },
-	            _react2.default.createElement(
-	                "p",
-	                { style: { fontSize: 30, color: '#C94E3E' } },
-	                "About"
-	            )
-	        ),
-	        _react2.default.createElement("div", { style: { height: 1, width: '30%', margin: 'auto', background: 'lightgrey' } }),
-	        _react2.default.createElement(
-	            "div",
-	            { className: "aboutPageBody" },
-	            _react2.default.createElement(
-	                "p",
-	                { style: { padding: 10, fontSize: 20, color: '#4397B9' } },
-	                "Personal Life"
-	            ),
-	            _react2.default.createElement(
-	                "p",
-	                { style: { textAlign: 'left' } },
-	                "I was born in Eureka Springs, Arkansas and later moved with my family to Pocatello, Idaho, where I currently reside.  I grew up with a strong curioustity towards computers, which started during my first interaction with them in grade school.  I convinced my family to purchase one, which solidified my love for technology. My childhood and adolescence was consumed by my passion, and transformed me into the PC hobbyiest and programmer I am today."
-	            ),
-	            _react2.default.createElement(
-	                "p",
-	                { style: { textAlign: 'left' } },
-	                "Beside my interests in technology, I spend my time as a cook for a local restaurant and playing a small variety of instruments -- including the guitar, ukulele and piano."
-	            ),
-	            _react2.default.createElement(
-	                "p",
-	                { style: { padding: 10, fontSize: 20, color: '#4397B9' } },
-	                "Professional Life"
-	            ),
-	            _react2.default.createElement(
-	                "p",
-	                { style: { textAlign: 'left' } },
-	                "Over the last year or two, I put myself into a position to do a bit of \"soul searching\", in terms of what I wanted to pursue in life.  In that time, I stumbled upon the amazing, and admittedly frustrating, world of computer programming."
-	            ),
-	            _react2.default.createElement(
-	                "p",
-	                { style: { textAlign: 'left' } },
-	                "At first, I tried my hand at Java software development.  However, my interests shifted towards Python programming fairly quickly, as the language was easier to understand for a beginner.  After about a year of coding basic software, I started to dabble in Javascript and web engineering.  I have now been coding in Javascript for close to 6 months."
-	            ),
-	            _react2.default.createElement(
-	                "p",
-	                { style: { textAlign: 'left', paddingBottom: 20 } },
-	                "To date, I have completed close to half of Codecademy's courses, and have plans to take the SQL courses soon, as well.  I have also taught myself Javascript's React library, Python's Django web framework, and NodeJS."
-	            )
-	        )
-	    );
-	};
+	var About = function (_React$Component) {
+	    (0, _inherits3.default)(About, _React$Component);
+
+	    function About() {
+	        (0, _classCallCheck3.default)(this, About);
+
+	        var _this = (0, _possibleConstructorReturn3.default)(this, (About.__proto__ || (0, _getPrototypeOf2.default)(About)).call(this));
+
+	        _this.state = { selected: false };
+	        _this.handleHover = _this.handleHover.bind(_this);
+	        return _this;
+	    }
+
+	    (0, _createClass3.default)(About, [{
+	        key: 'handleHover',
+	        value: function handleHover() {
+	            this.setState({ selected: !this.state.selected });
+	        }
+	    }, {
+	        key: 'render',
+	        value: function render() {
+	            var aboutImageStyle = {
+	                backgroundImage: 'url(http://imgur.com/Vg4jqXb.png)',
+	                backgroundSize: 'cover',
+	                borderRadius: '50%',
+	                height: 200,
+	                width: 200,
+	                float: 'left',
+	                marginRight: 20,
+	                border: '8px solid rgba(28, 88, 138, .5)',
+	                transition: '0s ease-in'
+	            };
+
+	            if (this.state.selected == true) {
+	                aboutImageStyle['transition'] = 'border-radius .5s ease-in-out';
+	                aboutImageStyle['borderRadius'] = '0%';
+	            } else {
+	                aboutImageStyle['transition'] = 'border-radius .5s ease-in-out';
+	                aboutImageStyle['borderRadius'] = '50%';
+	            }
+
+	            return _react2.default.createElement(
+	                'div',
+	                { className: 'about' },
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'aboutPageTitle' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { fontSize: 30, color: '#C94E3E', textAlign: 'center' } },
+	                        'About'
+	                    )
+	                ),
+	                _react2.default.createElement('div', { style: { height: 1, width: '30%', margin: 'auto', background: 'lightgrey' } }),
+	                _react2.default.createElement(
+	                    'div',
+	                    { className: 'aboutPageBody' },
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { padding: 10, fontSize: 20, color: 'rgba(28, 88, 138, 1)' } },
+	                        'Personal Life'
+	                    ),
+	                    _react2.default.createElement('div', { className: 'aboutImage', style: aboutImageStyle,
+	                        onMouseEnter: this.handleHover, onMouseLeave: this.handleHover }),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { textAlign: 'left', padding: 10 } },
+	                        'I was born in Eureka Springs, Arkansas and later moved with my family to Pocatello, Idaho, where I currently reside.  I grew up with a strong curioustity towards computers, which started during my first interaction with them in grade school.  I convinced my family to purchase one, which solidified my love for technology. My childhood and adolescence was consumed by my passion, and transformed me into the PC hobbyiest and programmer I am today.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { textAlign: 'left' } },
+	                        'Beside my interests in technology, I spend my time as a cook for a local restaurant and playing a small variety of instruments -- including the guitar, ukulele and piano.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { padding: 10, fontSize: 20, color: 'rgba(28, 88, 138, 1)' } },
+	                        'Professional Life'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { textAlign: 'left' } },
+	                        'Over the last year or two, I put myself into a position to do a bit of "soul searching", in terms of what I wanted to pursue in life.  In that time, I stumbled upon the amazing, and admittedly frustrating, world of computer programming.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { textAlign: 'left' } },
+	                        'At first, I tried my hand at Java software development.  However, my interests shifted towards Python programming fairly quickly, as the language was easier to understand for a beginner.  After about a year of coding basic software, I started to dabble in Javascript and web engineering.  I have now been coding in Javascript for close to 6 months.'
+	                    ),
+	                    _react2.default.createElement(
+	                        'p',
+	                        { style: { textAlign: 'left', paddingBottom: 20 } },
+	                        'To date, I have completed close to half of Codecademy\'s courses, and have plans to take the SQL courses soon, as well.  I have also taught myself Javascript\'s React library, Python\'s Django web framework, and NodeJS.'
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+	    return About;
+	}(_react2.default.Component);
 
 	exports.default = About;
 
@@ -28862,6 +28943,10 @@
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
+
+	var _assign = __webpack_require__(328);
+
+	var _assign2 = _interopRequireDefault(_assign);
 
 	var _react = __webpack_require__(88);
 
@@ -28916,23 +29001,30 @@
 	                _react2.default.createElement(
 	                    'p',
 	                    { style: { fontSize: 30 } },
-	                    'Junior Front-End Engineer'
+	                    'Junior Front-End Developer'
 	                )
 	            ),
 	            _react2.default.createElement('div', { style: { height: 1, width: '30%', margin: 'auto', background: 'lightgrey' } }),
 	            _react2.default.createElement(
 	                'div',
-	                { style: homeText },
+	                { style: (0, _assign2.default)({}, { paddingBottom: 90 }, homeText) },
 	                _react2.default.createElement(
 	                    'p',
-	                    null,
-	                    'Javascript, Python, CSS, and HTML'
+	                    { style: { fontSize: 20 } },
+	                    'Javascript',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { style: { color: 'rgba(28, 88, 138, 1)', fontSize: 20 } },
+	                        '|'
+	                    ),
+	                    'Python',
+	                    _react2.default.createElement(
+	                        'span',
+	                        { style: { color: 'rgba(28, 88, 138, 1)', fontSize: 20 } },
+	                        '|'
+	                    ),
+	                    'HTML / CSS'
 	                )
-	            ),
-	            _react2.default.createElement(
-	                'p',
-	                { style: { fontSize: 10, textAlign: 'center' } },
-	                'Site crafted through Javascript\'s React library.'
 	            ),
 	            _react2.default.createElement(
 	                'div',
@@ -28941,7 +29033,7 @@
 	                    'div',
 	                    { style: { paddingLeft: 40, paddingRight: 40 } },
 	                    _react2.default.createElement(_navLink2.default, { linkText: 'Projects', linkTo: '/projects',
-	                        linkDesc: 'My collection of coding projects spanning multiple languages. Projects are primarily stored through Github.',
+	                        linkDesc: 'A (small) collection of coding projects spanning multiple languages.',
 	                        linkImage: 'url(https://images.pexels.com/photos/47425/pexels-photo-47425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)',
 	                        internal: true,
 	                        height: 250, width: 350,
@@ -28952,7 +29044,7 @@
 	                    'div',
 	                    { style: { paddingLeft: 40, paddingRight: 40 } },
 	                    _react2.default.createElement(_navLink2.default, { linkText: 'About', linkTo: '/about',
-	                        linkDesc: 'If you would like to take a moment to learn about my personal, and professional life, navigate here.',
+	                        linkDesc: 'Learn a little bit about my life.',
 	                        linkImage: 'url(http://imgur.com/pszu3EL.png)',
 	                        internal: true,
 	                        height: 250, width: 350,
@@ -28963,7 +29055,7 @@
 	                    'div',
 	                    { style: { paddingLeft: 40, paddingRight: 40 } },
 	                    _react2.default.createElement(_navLink2.default, { linkText: 'Contact', linkTo: '/contact',
-	                        linkDesc: 'Please contact me for any professional reason, e.g. hiring information, design and developer notes, etc.',
+	                        linkDesc: 'Contact me for hiring, collaberation opportunites, or if you just want to ask me a few questions.',
 	                        linkImage: 'url(http://imgur.com/W3xNM2L.png)',
 	                        internal: true,
 	                        height: 250, width: 350,
@@ -29193,7 +29285,7 @@
 	                null,
 	                _react2.default.createElement(
 	                    'p',
-	                    { style: { fontSize: 50, color: '#C94E3E' } },
+	                    { style: { fontSize: 50, color: 'rgba(28, 88, 138, 1)' } },
 	                    '404...'
 	                )
 	            ),

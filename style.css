@@ -1,12 +1,13 @@
 .root {
     font-family: 'Lato', sans-serif;
-    letter-spacing: 3px;
+    letter-spacing: 4.5px;
     line-height: 200%;
 }
 
 .currentPage {
     width: 100%;
     margin: auto;
+    padding-bottom: 35px;
 }
 
 /*Navigation bar*/
@@ -20,12 +21,11 @@
 }
 
 .navLink {
-    width: 150px;
+    width: 200px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .navfoot {
@@ -68,7 +68,7 @@
     background-image: url('http://imgur.com/oBYBj4d.png');
     background-size: 100% 100%;
     animation-name: homecoverimage;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
     background-attachment: fixed;
     background-position: center;
@@ -90,16 +90,6 @@
     animation-fill-mode: forwards;
 }
 
-@keyframes homecovertext {
-    0% {color: rgba(0, 0, 0, .0);}
-    100% {color: white;}
-}
-
-@keyframes homecoverimage {
-    0% {width: 70%; height: 600px;}
-    100% {width: 80%; height: 700px;}
-}
-
 .navlinktext {
     font-size: 50px;
     color: white;
@@ -110,7 +100,15 @@
     margin: auto;
     width: 80%;
     height: 100%;
-}
+}            <div style={{paddingLeft: 40, paddingRight: 40}}>
+            <NavLink linkText="Portfolio" linkTo="https://github.com/staticCoffee/staticcoffee.github.io"
+                linkDesc="The website you are currently visiting. Check out the code behind it!"
+                linkImage="url(http://imgur.com/7jrBP4U.png)"
+                internal={true}
+                height={300} width={400}
+                backgroundSize="cover"
+                repeat="no-repeat"/>
+            </div>
 
 .aboutPageTitle {
     width: 100%;
@@ -122,8 +120,24 @@
 
 .aboutPageBody {
     text-align: center;
-    width: 75%;
+    width: 60%;
     margin: auto;
+}
+
+.aboutImage {
+    background-image: url('http://imgur.com/Vg4jqXb.png');
+    background-size: cover;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin-right: 20px;
+    border: 8px solid rgba(28, 88, 138, .5);
+}
+
+.aboutImage:hover {
+    transition: border-radius .5s ease-in; 
+    border-radius: 0;
 }
 
 /*Contact page*/
@@ -174,6 +188,16 @@
 }
 
 /*CSS animations*/
+@keyframes homecovertext {
+    0% {color: rgba(0, 0, 0, .0);}
+    100% {color: white;}
+}
+
+@keyframes homecoverimage {
+    0% {width: 70%; height: 600px;}
+    100% {width: 80%; height: 700px;}
+}
+
 @keyframes foot {
     0% {background-color: rgba(28, 88, 138, .0);}
     50% {background-color: rgba(201, 78, 62, .5);}
