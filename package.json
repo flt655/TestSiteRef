@@ -1,6 +1,6 @@
 {
   "name": "staticportfolio",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Portfolio site crafted through the React library.",
   "main": "index.js",
   "scripts": {

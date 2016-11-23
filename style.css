@@ -21,7 +21,7 @@
 }
 
 .navLink {
-    width: 200px;
+    width: 175px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -100,15 +100,7 @@
     margin: auto;
     width: 80%;
     height: 100%;
-}            <div style={{paddingLeft: 40, paddingRight: 40}}>
-            <NavLink linkText="Portfolio" linkTo="https://github.com/staticCoffee/staticcoffee.github.io"
-                linkDesc="The website you are currently visiting. Check out the code behind it!"
-                linkImage="url(http://imgur.com/7jrBP4U.png)"
-                internal={true}
-                height={300} width={400}
-                backgroundSize="cover"
-                repeat="no-repeat"/>
-            </div>
+}
 
 .aboutPageTitle {
     width: 100%;
@@ -136,7 +128,7 @@
 }
 
 .aboutImage:hover {
-    transition: border-radius .5s ease-in; 
+    transition: border-radius .5s ease-in;
     border-radius: 0;
 }
 

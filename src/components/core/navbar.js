@@ -27,6 +27,28 @@ class NavbarLink extends React.Component {
             transition: '.0s ease-in'
         }
 
+        var locationStyle = {
+            height: 2,
+            width: 75,
+            margin: 'auto',
+            backgroundColor: 'rgba(201, 78, 62, .0)',
+            transition: '0s ease-in-out'
+        }
+
+        if (location.hash == '#/' && this.props.linkText == 'static') {
+            locationStyle['backgroundColor'] = 'rgba(201, 78, 62, .7)';
+            locationStyle['transition'] = 'background-color .3s ease-in-out';
+        }else if (location.hash == '#/projects' && this.props.linkText == 'Projects') {
+            locationStyle['backgroundColor'] = 'rgba(201, 78, 62, .7)';
+            locationStyle['transition'] = 'background-color .3s ease-in-out';
+        }else if (location.hash == '#/about' && this.props.linkText == 'About') {
+            locationStyle['backgroundColor'] = 'rgba(201, 78, 62, .7)';
+            locationStyle['transition'] = 'background-color .3s ease-in-out';
+        }else if (location.hash == '#/contact' && this.props.linkText == 'Contact') {
+            locationStyle['backgroundColor'] = 'rgba(201, 78, 62, .7)';
+            locationStyle['transition'] = 'background-color .3s ease-in-out';
+        }
+
         if (this.state.selected == true) {
             linkStyle['backgroundColor'] = 'rgba(201, 78, 62, .8)';
             linkStyle['transition'] = 'background-color .5s ease-in-out'
@@ -52,7 +74,9 @@ class NavbarLink extends React.Component {
                     <div className="navLink">
                         <div>{this.props.linkText}<span style={colorLinkStyle}>
                             {this.props.linkColorText}
-                        </span></div>
+                        </span>
+                        <div style={locationStyle}></div>
+                        </div>
                     </div>
                 </Link>
             </div>
