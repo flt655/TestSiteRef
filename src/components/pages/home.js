@@ -33,12 +33,12 @@ const Home = () =>
                 </p>
             </div>
             <div style={
-                {height: 500, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                {height: 350, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <div style={{paddingLeft: 40, paddingRight: 40}}><NavLink linkText="Projects" linkTo="/projects"
                     linkDesc="A (small) collection of coding projects spanning multiple languages."
                     linkImage="url(https://images.pexels.com/photos/47425/pexels-photo-47425.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb)"
                     internal={true}
-                    height={250} width={350}
+                    height={200} width={300}
                     backgroundSize="cover"
                     repeat="no-repeat"/>
                 </div>
@@ -46,7 +46,7 @@ const Home = () =>
                     linkDesc="Learn a little bit about my life."
                     linkImage="url(http://imgur.com/pszu3EL.png)"
                     internal={true}
-                    height={250} width={350}
+                    height={200} width={300}
                     backgroundSize="cover"
                     repeat="no-repeat"/>
                 </div>
@@ -54,7 +54,7 @@ const Home = () =>
                     linkDesc="Contact me for hiring, collaberation opportunites, or if you just want to ask me a few questions."
                     linkImage="url(http://imgur.com/W3xNM2L.png)"
                     internal={true}
-                    height={250} width={350}
+                    height={200} width={300}
                     backgroundSize="cover"
                     repeat="no-repeat"/>
                 </div>

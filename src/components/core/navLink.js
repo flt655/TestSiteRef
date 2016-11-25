@@ -55,7 +55,7 @@ export default class NavLink extends React.Component {
                                 <p className="navlinktext">{this.props.linkText}</p>
                         </div>
                     </Link>
-                    <div style={{height: this.props.height, width: 300, margin: 'auto', textAlign: 'left'}}>
+                    <div style={{height: this.props.height / 1.1, width: 260, margin: 'auto', textAlign: 'center'}}>
                         <p>{this.props.linkDesc}</p>
                     </div>
                 </div>
@@ -73,8 +73,8 @@ export default class NavLink extends React.Component {
                         </div>
                     </a>
                     <div style={
-                        {height: this.props.height, width: 300, margin: 'auto',
-                        textAlign: 'left'}}>
+                        {height: this.props.height, width: 260, margin: 'auto',
+                        textAlign: 'center'}}>
                         {this.props.linkDesc}
                     </div>
                 </div>
